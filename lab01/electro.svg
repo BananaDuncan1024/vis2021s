@@ -59,7 +59,8 @@
   <path d="M 160 488, 227 488" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
   
   <!--limbs-->
-  <path d="M 138 405, 94 448 A 16 36, 40, 1, 0, 120 468" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
+  <circle fill="none" stroke="#890000" stroke-width="1" cx="120 " cy="468" r="7"/>
+  <path d="M 138 405, 94 446 A 16 36, 40, 0, 0, 120 468" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
   <path d="M 251 405, 295 448 A 16 36, 140, 1, 1, 269 468" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
   <path d="M 128 448 A 16 26, 150, 1, 0, 156 496 A 22 26, 162, 1, 0, 128 448" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
   <path d="M 259 448 A 16 26, 20, 1, 1, 234 496 A 22 26, -2, 1, 1, 259 448" stroke="#F00" stroke-width="10" stroke-linejoin="round" opacity="0.3" fill="none"/>
@@ -73,18 +74,12 @@
   <!--tail-lightnings-->
   
   <defs>
-    <path id="edgePath" d="M 192 10, 165 62, 235 62, 196 124, 4 124, 4 382, 145 382, A 156, 156, 0, 0, 0, 138 405 m 0 0, -44 43 A 16 36, 40, 1, 0, 120 468 m 0 0, 1.25 -1.5 A 16 26, 150, 1, 0, 160 488 m 0 0, 64 0 A 22 26, -2, 0, 0, 234 496 A 16 26, 20, 0, 0, 265 464 A 16 36, 140, 1, 0, 295 448 m 0 0, -20 -23 Q 330 390, 365 420 Q 416 446, 443 390 m 0 0 2 -2 A 15 22, 25, 0, 0, 470 372 m 0 0 -31 -15 A 15 22, 25, 0, 0, 445 388 Q 416 446, 365 420 Q 330 390, 275 425 m 0 0, -24 -20 A 156, 156, 0, 0, 1, 242 382 m 0 0, 144 0, 0 -258, -190 0 M 196 124, 235 62, 165 62, 192 10" stroke="#6C3365" stroke-width="16" stroke-linejoin="round" opacity="0.3" fill="none"/>
+ 
   </defs>
   
   <use xlink:href="#edgePath"/>
   
-  <circle cx="0" cy="0" r="15" stroke="brown" stroke-width="1.25" fill="none">
-    <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#edgePath"/>
-    </animateMotion>
-    <animate attributeName="r" to="15" dur="15s" repeatCount="indefinite"/>
-    <animate attributeName="stroke" to="yellow" dur="15s" repeatCount="indefinite"/>
-  </circle>
-  
+
   <path d="M256 256 V270 V242 M256 256 H270 H242" stroke="black" fill="white"></path>
+
 </svg>
