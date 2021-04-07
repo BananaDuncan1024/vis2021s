@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/ROCK/Desktop/vis2021s-main/vis2021s-main/lab02/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="./index_files/d3.v4.js.下載"></script>
+		
+		<style>
+      		@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+		    div, ul {
+		      border: solid black 1px;
+		      margin: 5px;
+		      padding: 10px;
+		      background-color: rgba(255, 255, 128, 0.1);
+		    }
+
+		    div:hover, ul:hover {
+		      background-color: rgba(255, 128, 128, 0.1);
+		    }
+
+			html, body {
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				padding: 10px;
+		        background-color: rgba(255, 255, 0, 0.02);
+			}
+
+			svg {
+		        font-family: 'Noto Serif JP', serif;
+			}
+
+			#dropfile {
+				height: 5%;
+				width: 100%;
+				border-style: dotted;;
+				display: block;
+				text-align: center;
+			    animation-name: oxxo;
+			    animation-duration: 2s;
+			    animation-iteration-count: infinite;
+			    padding: 10px;
+		        background-color: rgba(255, 255, 0, 0.1);
+		        font-family: 'Noto Serif JP', serif;
+		        margin-bottom: 10px;
+			}
+			#dropfile:hover {
+			    background-color: rgba(128, 255, 255, 0.1);
+			}
+			@keyframes oxxo{
+			    from {
+			        border-style: dotted;;
+			        border-color: blue;
+			        color: blue;
+			    }
+			    to {
+			        border-style: solid;
+			        border-color: red;
+			        color: crimson;
+			    }
+			}
+			
+			#treemap {
+				height: 150%;
+				width: 150%;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Lab 02 treemap
+		</div>
+		<ul>
+			<li>遠距教學授課防疫演練: 2021.03.18 (四) </li>
+			<li>上台報告: 2021.04.01 (四) </li>
+			<li><a href="https://www.d3-graph-gallery.com/graph/treemap_custom.html">Treemap customization in d3.js</a></li>
+			<li><a href="http://blog.infographics.tw/2015/10/d3js-tutorial-treemap-and-budget/">D3.js 實戰 － 利用 Treemap Layout 將政府預算視覺化</a></li>
+		</ul>
+
+		<div id="dropfile" for="csvfile">
+			CSV 資料扔過來! Drop your CSV here.
+		</div>
+		
+		<div id="treemap"><div><svg width="3191" height="1513"><g><rect x="0" y="90" width="716.5382059800664" height="498.2127659574469" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="721.5382059800664" y="90" width="0" height="498.2127659574469" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="0" y="643.2127659574469" width="369.06341181568683" height="555.0030395136778" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="379.06341181568683" y="643.2127659574469" width="337.4747941643796" height="555.0030395136778" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="0" y="1208.2158054711247" width="316.9421926910299" height="284.78419452887533" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="326.9421926910299" y="1208.2158054711247" width="389.59601328903653" height="150.79137883393196" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="326.9421926910299" y="1369.0071843050566" width="389.59601328903653" height="123.99281569494337" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="741.5382059800664" y="90" width="322.95071173945723" height="567.2554202554203" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1074.4889177195237" y="90" width="260.1298227320126" height="567.2554202554203" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1344.6187404515363" y="90" width="247.5656449305236" height="567.2554202554203" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="741.5382059800664" y="667.2554202554203" width="357.0402823920266" height="296.2810032465205" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="741.5382059800664" y="973.5364235019408" width="357.0402823920266" height="256.7608737953565" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1108.578488372093" y="667.2554202554203" width="275.1945182724253" height="320.6010829087752" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1393.7730066445183" y="667.2554202554203" width="198.41137873754155" height="320.6010829087752" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1108.578488372093" y="997.8565031641955" width="259.23958018725466" height="232.4407941331018" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="1377.8180685593477" y="997.8565031641955" width="214.36631682271218" height="232.4407941331018" style="stroke: black; fill: rgb(143, 209, 117);"></rect><rect x="741.5382059800664" y="1285.2972972972973" width="549.4200166112956" height="207.7027027027027" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="1300.958222591362" y="1285.2972972972973" width="176.47333887043192" height="207.7027027027027" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="1487.431561461794" y="1285.2972972972973" width="104.75282392026588" height="126.06418918918916" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="1487.431561461794" y="1421.3614864864865" width="104.75282392026588" height="71.63851351351354" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="1617.1843853820599" y="90" width="248.58096468561575" height="480.0795058599938" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1875.7653500676756" y="90" width="248.58096468561598" height="480.0795058599938" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="2134.3463147532916" y="90" width="233.80490956072344" height="480.0795058599938" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="2378.151224314015" y="90" width="226.4168819982774" height="480.0795058599938" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1617.1843853820599" y="580.0795058599938" width="350.8954253365973" height="301.01072479626805" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1617.1843853820599" y="891.0902306562618" width="350.8954253365973" height="230.78249661646555" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1978.0798107186572" y="580.0795058599938" width="285.27807527539767" height="272.0276464998417" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1978.0798107186572" y="862.1071523598355" width="285.27807527539767" height="259.7655749128919" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="2273.357885994055" y="580.0795058599938" width="174.4379569287771" height="382.62209985136815" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="2457.795842922832" y="580.0795058599938" width="146.77226338946048" height="382.62209985136815" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="2273.357885994055" y="972.7016057113619" width="331.2102203182376" height="149.17112156136545" style="stroke: black; fill: rgb(255, 179, 102);"></rect><rect x="1617.1843853820599" y="1176.8727272727274" width="315.67631703844336" height="316.1272727272726" style="stroke: black; fill: rgb(128, 255, 128);"></rect><rect x="1942.8607024205032" y="1176.8727272727274" width="274.9667774086381" height="316.1272727272726" style="stroke: black; fill: rgb(128, 255, 128);"></rect><rect x="2227.8274798291413" y="1176.8727272727274" width="356.3858566682484" height="171.18181818181802" style="stroke: black; fill: rgb(128, 255, 128);"></rect><rect x="2227.8274798291413" y="1358.0545454545454" width="356.3858566682484" height="134.9454545454546" style="stroke: black; fill: rgb(128, 255, 128);"></rect><rect x="2594.2133364973897" y="1176.8727272727274" width="10.354769814902738" height="316.1272727272726" style="stroke: black; fill: rgb(128, 255, 128);"></rect><rect x="2629.5681063122925" y="90" width="492.80932605600356" height="145.11764705882354" style="stroke: black; fill: rgb(210, 121, 166);"></rect><rect x="3132.377432368296" y="90" width="8.622567631703987" height="145.11764705882354" style="stroke: black; fill: rgb(210, 121, 166);"></rect><rect x="2629.5681063122925" y="290.11764705882354" width="291.27176079734227" height="295.2870018975333" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2930.8398671096347" y="290.11764705882354" width="210.16013289036528" height="295.2870018975333" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2629.5681063122925" y="595.4046489563568" width="193.4856170488615" height="268.15037950664146" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2833.053723361154" y="595.4046489563568" width="155.3320638522" height="268.15037950664146" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2998.385787213354" y="595.4046489563568" width="142.61421278664602" height="268.15037950664146" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2629.5681063122925" y="873.5550284629983" width="278.1597307221541" height="125.03700189753317" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2629.5681063122925" y="1008.5920303605315" width="278.1597307221541" height="112.76091081593927" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2917.7278370344466" y="873.5550284629983" width="115.60808775068244" height="187.13958031030256" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="3043.335924785129" y="873.5550284629983" width="97.66407521487099" height="187.13958031030256" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2917.7278370344466" y="1070.6946087733008" width="106.63608148277672" height="50.65833240316988" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="3034.3639185172233" y="1070.6946087733008" width="106.63608148277672" height="50.65833240316988" style="stroke: black; fill: rgb(255, 102, 51);"></rect><rect x="2629.5681063122925" y="1176.3529411764707" width="300.6357537811027" height="192.76470588235293" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="2940.203860093395" y="1176.3529411764707" width="4.79217875148106" height="192.76470588235293" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="2629.5681063122925" y="1424.1176470588236" width="315.4279325325838" height="68.88235294117635" style="stroke: black; fill: rgb(0, 191, 255);"></rect><rect x="2949.9960388448762" y="1424.1176470588236" width="0" height="68.88235294117635" style="stroke: black; fill: rgb(0, 191, 255);"></rect><rect x="2949.9960388448762" y="1424.1176470588236" width="0" height="68.88235294117635" style="stroke: black; fill: rgb(0, 191, 255);"></rect><rect x="2949.9960388448762" y="1424.1176470588236" width="0" height="68.88235294117635" style="stroke: black; fill: rgb(0, 191, 255);"></rect><rect x="2969.9960388448762" y="1176.3529411764707" width="171.00396115512376" height="121.04334365325076" style="stroke: black; fill: rgb(83, 198, 83);"></rect><rect x="2969.9960388448762" y="1352.3962848297215" width="112.20277280858681" height="56.77355152587347" style="stroke: black; fill: rgb(255, 128, 0);"></rect><rect x="3087.198811653463" y="1352.3962848297215" width="0" height="56.77355152587347" style="stroke: black; fill: rgb(255, 128, 0);"></rect><rect x="3087.198811653463" y="1352.3962848297215" width="0" height="56.77355152587347" style="stroke: black; fill: rgb(255, 128, 0);"></rect><rect x="2969.9960388448762" y="1464.169836355595" width="112.20277280858681" height="28.830163644405047" style="stroke: black; fill: rgb(83, 198, 83);"></rect><rect x="3107.198811653463" y="1352.3962848297215" width="33.80118834653695" height="75.40247678018568" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1432.7987616099072" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1482.7987616099072" width="33.80118834653695" height="10.20123839009284" style="stroke: black; fill: rgb(102, 0, 255);"></rect><rect x="3146" y="1482.7987616099072" width="0" height="10.20123839009284" style="stroke: black; fill: rgb(102, 0, 255);"></rect><rect x="3146" y="1482.7987616099072" width="0" height="10.20123839009284" style="stroke: black; fill: rgb(102, 0, 255);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(255, 102, 255);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(210, 121, 166);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(210, 121, 166);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(83, 198, 83);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(209, 137, 117);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(64, 45, 84);"></rect><rect x="3107.198811653463" y="1520.5" width="33.80118834653695" height="0" style="stroke: black; fill: rgb(64, 45, 84);"></rect><text x="5" y="110" font-size="1rem" fill="white">秀林鄉</text><text x="726.5382059800664" y="110" font-size="1rem" fill="white">花蓮市</text><text x="5" y="663.2127659574469" font-size="1rem" fill="white">北投區</text><text x="384.06341181568683" y="663.2127659574469" font-size="1rem" fill="white">北投區</text><text x="5" y="1228.2158054711247" font-size="1rem" fill="white">文山區</text><text x="331.9421926910299" y="1228.2158054711247" font-size="1rem" fill="white">中正區</text><text x="331.9421926910299" y="1389.0071843050566" font-size="1rem" fill="white">北投區</text><text x="746.5382059800664" y="110" font-size="1rem" fill="white">尖石鄉</text><text x="1079.4889177195237" y="110" font-size="1rem" fill="white">尖石鄉</text><text x="1349.6187404515363" y="110" font-size="1rem" fill="white">五峰鄉</text><text x="746.5382059800664" y="687.2554202554203" font-size="1rem" fill="white">五峰鄉</text><text x="746.5382059800664" y="993.5364235019408" font-size="1rem" fill="white">新埔鎮</text><text x="1113.578488372093" y="687.2554202554203" font-size="1rem" fill="white">關西鎮</text><text x="1398.7730066445183" y="687.2554202554203" font-size="1rem" fill="white">峨眉鄉</text><text x="1113.578488372093" y="1017.8565031641955" font-size="1rem" fill="white">新埔鎮</text><text x="1382.8180685593477" y="1017.8565031641955" font-size="1rem" fill="white">竹北市</text><text x="746.5382059800664" y="1305.2972972972973" font-size="1rem" fill="white">和平區</text><text x="1305.958222591362" y="1305.2972972972973" font-size="1rem" fill="white">和平區</text><text x="1492.431561461794" y="1305.2972972972973" font-size="1rem" fill="white">北區</text><text x="1492.431561461794" y="1441.3614864864865" font-size="1rem" fill="white">梧棲區</text><text x="1622.1843853820599" y="110" font-size="1rem" fill="white">石碇區</text><text x="1880.7653500676756" y="110" font-size="1rem" fill="white">平溪區</text><text x="2139.3463147532916" y="110" font-size="1rem" fill="white">烏來區</text><text x="2383.151224314015" y="110" font-size="1rem" fill="white">瑞芳區</text><text x="1622.1843853820599" y="600.0795058599938" font-size="1rem" fill="white">新店區</text><text x="1622.1843853820599" y="911.0902306562618" font-size="1rem" fill="white">林口區</text><text x="1983.0798107186572" y="600.0795058599938" font-size="1rem" fill="white">中和區</text><text x="1983.0798107186572" y="882.1071523598355" font-size="1rem" fill="white">樹林區</text><text x="2278.357885994055" y="600.0795058599938" font-size="1rem" fill="white">板橋區</text><text x="2462.795842922832" y="600.0795058599938" font-size="1rem" fill="white">淡水區</text><text x="2278.357885994055" y="992.7016057113619" font-size="1rem" fill="white">新莊區</text><text x="1622.1843853820599" y="1196.8727272727274" font-size="1rem" fill="white">八德區</text><text x="1947.8607024205032" y="1196.8727272727274" font-size="1rem" fill="white">桃園區</text><text x="2232.8274798291413" y="1196.8727272727274" font-size="1rem" fill="white">大園區</text><text x="2232.8274798291413" y="1378.0545454545454" font-size="1rem" fill="white">楊梅區</text><text x="2599.2133364973897" y="1196.8727272727274" font-size="1rem" fill="white">新屋區</text><text x="2634.5681063122925" y="110" font-size="1rem" fill="white">仁愛區</text><text x="3137.377432368296" y="110" font-size="1rem" fill="white">中正區</text><text x="2634.5681063122925" y="310.11764705882354" font-size="1rem" fill="white">南庄鄉</text><text x="2935.8398671096347" y="310.11764705882354" font-size="1rem" fill="white">南庄鄉</text><text x="2634.5681063122925" y="615.4046489563568" font-size="1rem" fill="white">泰安鄉</text><text x="2838.053723361154" y="615.4046489563568" font-size="1rem" fill="white">三灣鄉</text><text x="3003.385787213354" y="615.4046489563568" font-size="1rem" fill="white">泰安鄉</text><text x="2634.5681063122925" y="893.5550284629983" font-size="1rem" fill="white">大湖鄉</text><text x="2634.5681063122925" y="1028.5920303605315" font-size="1rem" fill="white">竹南鎮</text><text x="2922.7278370344466" y="893.5550284629983" font-size="1rem" fill="white">通霄鎮</text><text x="3048.335924785129" y="893.5550284629983" font-size="1rem" fill="white">頭屋鄉</text><text x="2922.7278370344466" y="1090.6946087733008" font-size="1rem" fill="white">後龍鎮</text><text x="3039.3639185172233" y="1090.6946087733008" font-size="1rem" fill="white">後龍鎮</text><text x="2634.5681063122925" y="1196.3529411764707" font-size="1rem" fill="white">蘇澳鎮</text><text x="2945.203860093395" y="1196.3529411764707" font-size="1rem" fill="white">宜蘭市</text><text x="2634.5681063122925" y="1444.1176470588236" font-size="1rem" fill="white">蘭嶼鄉</text><text x="2954.9960388448762" y="1444.1176470588236" font-size="1rem" fill="white">成功鎮</text><text x="2954.9960388448762" y="1444.1176470588236" font-size="1rem" fill="white">臺東市</text><text x="2954.9960388448762" y="1444.1176470588236" font-size="1rem" fill="white">大武鄉</text><text x="2974.9960388448762" y="1196.3529411764707" font-size="1rem" fill="white">阿里山鄉</text><text x="2974.9960388448762" y="1372.3962848297215" font-size="1rem" fill="white">國姓鄉</text><text x="3092.198811653463" y="1372.3962848297215" font-size="1rem" fill="white">魚池鄉</text><text x="3092.198811653463" y="1372.3962848297215" font-size="1rem" fill="white">信義鄉</text><text x="2974.9960388448762" y="1484.169836355595" font-size="1rem" fill="white">南竿鄉</text><text x="3112.198811653463" y="1372.3962848297215" font-size="1rem" fill="white">彰化市</text><text x="3112.198811653463" y="1452.7987616099072" font-size="1rem" fill="white">田中鎮</text><text x="3112.198811653463" y="1502.7987616099072" font-size="1rem" fill="white">金城鎮</text><text x="3151" y="1502.7987616099072" font-size="1rem" fill="white">金湖鎮</text><text x="3151" y="1502.7987616099072" font-size="1rem" fill="white">烈嶼鄉</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">馬公市</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">望安鄉</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">白沙鄉</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">西區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">中西區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">永康區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">前鎮區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">旗津區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">旗津區</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">恆春鎮</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">麥寮鄉</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white">古坑鄉</text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white"></text><text x="3112.198811653463" y="1540.5" font-size="1rem" fill="white"></text><text x="1" y="140" font-size=".9rem" fill="white">53.5</text><text x="722.5382059800664" y="140" font-size=".9rem" fill="white">0</text><text x="1" y="693.2127659574469" font-size=".9rem" fill="white">30</text><text x="380.06341181568683" y="693.2127659574469" font-size=".9rem" fill="white">27.5</text><text x="1" y="1258.2158054711247" font-size=".9rem" fill="white">13.5</text><text x="327.9421926910299" y="1258.2158054711247" font-size=".9rem" fill="white">9</text><text x="327.9421926910299" y="1419.0071843050566" font-size=".9rem" fill="white">7.5</text><text x="742.5382059800664" y="140" font-size=".9rem" fill="white">26.5</text><text x="1075.4889177195237" y="140" font-size=".9rem" fill="white">21.5</text><text x="1345.6187404515363" y="140" font-size=".9rem" fill="white">20.5</text><text x="742.5382059800664" y="717.2554202554203" font-size=".9rem" fill="white">15.5</text><text x="742.5382059800664" y="1023.5364235019408" font-size=".9rem" fill="white">13.5</text><text x="1109.578488372093" y="717.2554202554203" font-size=".9rem" fill="white">13</text><text x="1394.7730066445183" y="717.2554202554203" font-size=".9rem" fill="white">9.5</text><text x="1109.578488372093" y="1047.8565031641956" font-size=".9rem" fill="white">9</text><text x="1378.8180685593477" y="1047.8565031641956" font-size=".9rem" fill="white">7.5</text><text x="742.5382059800664" y="1335.2972972972973" font-size=".9rem" fill="white">19.5</text><text x="1301.958222591362" y="1335.2972972972973" font-size=".9rem" fill="white">6.5</text><text x="1488.431561461794" y="1335.2972972972973" font-size=".9rem" fill="white">2.5</text><text x="1488.431561461794" y="1471.3614864864865" font-size=".9rem" fill="white">1.5</text><text x="1618.1843853820599" y="140" font-size=".9rem" fill="white">17.5</text><text x="1876.7653500676756" y="140" font-size=".9rem" fill="white">17.5</text><text x="2135.3463147532916" y="140" font-size=".9rem" fill="white">16.5</text><text x="2379.151224314015" y="140" font-size=".9rem" fill="white">16</text><text x="1618.1843853820599" y="630.0795058599938" font-size=".9rem" fill="white">15.5</text><text x="1618.1843853820599" y="941.0902306562618" font-size=".9rem" fill="white">12</text><text x="1979.0798107186572" y="630.0795058599938" font-size=".9rem" fill="white">11.5</text><text x="1979.0798107186572" y="912.1071523598355" font-size=".9rem" fill="white">11</text><text x="2274.357885994055" y="630.0795058599938" font-size=".9rem" fill="white">10</text><text x="2458.795842922832" y="630.0795058599938" font-size=".9rem" fill="white">8.5</text><text x="2274.357885994055" y="1022.7016057113619" font-size=".9rem" fill="white">7.5</text><text x="1618.1843853820599" y="1226.8727272727274" font-size=".9rem" fill="white">16</text><text x="1943.8607024205032" y="1226.8727272727274" font-size=".9rem" fill="white">14</text><text x="2228.8274798291413" y="1226.8727272727274" font-size=".9rem" fill="white">10</text><text x="2228.8274798291413" y="1408.0545454545454" font-size=".9rem" fill="white">8</text><text x="2595.2133364973897" y="1226.8727272727274" font-size=".9rem" fill="white">1</text><text x="2630.5681063122925" y="140" font-size=".9rem" fill="white">13.5</text><text x="3133.377432368296" y="140" font-size=".9rem" fill="white">0.5</text><text x="2630.5681063122925" y="340.11764705882354" font-size=".9rem" fill="white">13</text><text x="2931.8398671096347" y="340.11764705882354" font-size=".9rem" fill="white">9.5</text><text x="2630.5681063122925" y="645.4046489563568" font-size=".9rem" fill="white">8</text><text x="2834.053723361154" y="645.4046489563568" font-size=".9rem" fill="white">6.5</text><text x="2999.385787213354" y="645.4046489563568" font-size=".9rem" fill="white">6</text><text x="2630.5681063122925" y="923.5550284629983" font-size=".9rem" fill="white">5.5</text><text x="2630.5681063122925" y="1058.5920303605315" font-size=".9rem" fill="white">5</text><text x="2918.7278370344466" y="923.5550284629983" font-size=".9rem" fill="white">3.5</text><text x="3044.335924785129" y="923.5550284629983" font-size=".9rem" fill="white">3</text><text x="2918.7278370344466" y="1120.6946087733008" font-size=".9rem" fill="white">1</text><text x="3035.3639185172233" y="1120.6946087733008" font-size=".9rem" fill="white">1</text><text x="2630.5681063122925" y="1226.3529411764707" font-size=".9rem" fill="white">10.5</text><text x="2941.203860093395" y="1226.3529411764707" font-size=".9rem" fill="white">0.5</text><text x="2630.5681063122925" y="1474.1176470588236" font-size=".9rem" fill="white">5.5</text><text x="2950.9960388448762" y="1474.1176470588236" font-size=".9rem" fill="white">0</text><text x="2950.9960388448762" y="1474.1176470588236" font-size=".9rem" fill="white">0</text><text x="2950.9960388448762" y="1474.1176470588236" font-size=".9rem" fill="white">0</text><text x="2970.9960388448762" y="1226.3529411764707" font-size=".9rem" fill="white">4.5</text><text x="2970.9960388448762" y="1402.3962848297215" font-size=".9rem" fill="white">2</text><text x="3088.198811653463" y="1402.3962848297215" font-size=".9rem" fill="white">0</text><text x="3088.198811653463" y="1402.3962848297215" font-size=".9rem" fill="white">0</text><text x="2970.9960388448762" y="1514.169836355595" font-size=".9rem" fill="white">1.5</text><text x="3108.198811653463" y="1402.3962848297215" font-size=".9rem" fill="white">1</text><text x="3108.198811653463" y="1482.7987616099072" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1532.7987616099072" font-size=".9rem" fill="white">0.5</text><text x="3147" y="1532.7987616099072" font-size=".9rem" fill="white">0</text><text x="3147" y="1532.7987616099072" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">0</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">NaN</text><text x="3108.198811653463" y="1570.5" font-size=".9rem" fill="white">NaN</text><text x="1" y="66" font-size="1.1rem" fill="black">花蓮縣</text><text x="1" y="619.2127659574469" font-size="1.1rem" fill="black">臺北市</text><text x="742.5382059800664" y="66" font-size="1.1rem" fill="black">新竹縣</text><text x="742.5382059800664" y="1261.2972972972973" font-size="1.1rem" fill="black">臺中市</text><text x="1618.1843853820599" y="66" font-size="1.1rem" fill="black">新北市</text><text x="1618.1843853820599" y="1152.8727272727274" font-size="1.1rem" fill="black">桃園市</text><text x="2630.5681063122925" y="66" font-size="1.1rem" fill="black">基隆市</text><text x="2630.5681063122925" y="266.11764705882354" font-size="1.1rem" fill="black">苗栗縣</text><text x="2630.5681063122925" y="1152.3529411764707" font-size="1.1rem" fill="black">宜蘭縣</text><text x="2630.5681063122925" y="1400.1176470588236" font-size="1.1rem" fill="black">臺東縣</text><text x="2970.9960388448762" y="1152.3529411764707" font-size="1.1rem" fill="black">嘉義縣</text><text x="2970.9960388448762" y="1328.3962848297215" font-size="1.1rem" fill="black">南投縣</text><text x="2970.9960388448762" y="1440.169836355595" font-size="1.1rem" fill="black">連江縣</text><text x="3108.198811653463" y="1328.3962848297215" font-size="1.1rem" fill="black">彰化縣</text><text x="3108.198811653463" y="1458.7987616099072" font-size="1.1rem" fill="black">金門縣</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">澎湖縣</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">嘉義市</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">臺南市</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">高雄市</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">屏東縣</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black">雲林縣</text><text x="3108.198811653463" y="1519" font-size="1.1rem" fill="black"></text></g></svg></div></div>
+		
+		
+		<script>
+			//產生SVG
+			function mkSVG(container, bosses, data){
+				const treemap = document.createElement('div')
+				
+				const margin = {top: 10, right: 10, bottom: 10, left: 10};
+				const height = container.clientHeight - margin.top - margin.bottom;
+				const width = container.clientWidth - margin.left - margin.right;
+				
+				const svg = d3.select(treemap)
+							  .append('svg')
+							  .attr('width', width + margin.left + margin.right)
+							  .attr('height', height + margin.top + margin.bottom)
+							  .append('g')
+							
+				//利用d3.hierarchy產生x y的資料
+				const d3ds = d3.hierarchy(data).sum(({value}) => value)
+				
+				console.log(d3ds)
+				//設定svg位置
+				d3.treemap()
+				  .size([width, height])
+				  .paddingTop(45)
+				  .paddingRight(15)
+				  .paddingInner(10) 
+				  (d3ds)
+				  
+				  
+				//設定指導教授顏色
+				const color = d3.scaleOrdinal()
+								.domain(bosses)
+								.range([ "#402D54", "#D18975", "#8FD175", "#ff66ff", "#ffb366", "#80ff80", "#d279a6", "#ff6633", "#402D54", "#00bfff", "#53c653", "#ff8000","#53c653","#ff66ff","#6600ff","#ff66ff","#ff66ff","#d279a6","#402D54","#53c653","#D18975","#402D54"])
+								
+				//設定透明度，分數越低越透明
+				const opacity = d3.scaleLinear()
+								.domain([500])
+								.range([1,.1])
+								
+				//化長方形
+				svg
+					.selectAll('rectangle')
+					.data(d3ds.leaves())
+					.enter()
+					.append('rect')
+					 .attr('x', ({x0}) => x0)
+					 .attr('y', ({y0}) => y0)
+					 .attr('width', ({x0,x1}) => x1-x0)
+					 .attr('height', ({y0,y1}) => y1-y0)
+					 .style('stroke', 'black')
+					 .style('fill', ({parent}) => color(parent.data.name))
+					 .style('opacity', (d) => opacity(d.data.value))
+					 
+				
+				//寫學生姓名
+				svg
+					.selectAll('studentNames')
+					.data(d3ds.leaves())
+					.enter()
+					.append('text')
+					 .attr('x', ({x0}) => x0 + 5)
+					 .attr('y', ({y0}) => y0 + 20)
+					 .text(({data}) => data.name)
+					 .attr('font-size', '1rem')
+					 .attr('fill', 'white')
+				
+				svg
+					.selectAll('studentSecond')
+					.data(d3ds.leaves())
+					.enter()
+					.append('text')
+					 .attr('x', ({x0}) => x0 + 1)
+					 .attr('y', ({y0}) => y0 + 50)
+					 .text(({data}) => parseFloat(data.value))
+					 .attr('font-size', '.9rem')
+					 .attr('fill', 'white')
+					 
+				svg
+					.selectAll('labertory')
+					.data(d3ds.descendants().filter(function(d){return d.depth==1}))
+					.enter()
+					.append('text')
+					 .attr('x', ({x0}) => x0 + 1)
+					 .attr('y', ({y0}) => y0 + 21)
+					 .text(({data}) => data.name)
+					 .attr('font-size', '1.1rem')
+					 .attr('fill', 'black')
+					 
+				return treemap
+			}	
+		</script>
+		
+		<script>
+			window.addEventListener('load', () => {
+				const treemapContainer = document.getElementById('treemap')
+				
+				document.getElementById('dropfile').addEventListener('dragover', (evt) => {
+					evt.preventDefault()
+				})
+				
+				document.getElementById('dropfile').addEventListener('drop', (evt) => {
+					evt.preventDefault()
+					
+					const { files } = evt.dataTransfer
+					//console.log(e);
+					
+					if(files.length){
+						if(treemapContainer.innerHTML.length){
+							treemapContainer.innerHTML = ''
+						}
+					
+						const csvFile = files[0]
+						// alert(csvFile.name)
+						
+						//讀取csv
+						const fr = new FileReader()
+						
+						fr.onload = () => {
+							const allBoss = []
+							//console.log(fr.result)
+							const weatherArr = fr.result.split('\n').map(e => e.split(','))
+							//console.log(weatherArr)
+
+							const d3Json = {
+								children: [],
+								name: 'vis2021s'
+							}
+														
+							// const mapping = new Array(1022).fill(-1)
+							const scoreSort = weatherArr.sort((x,y) => {
+
+								return y[2] - x[2]
+
+							}).map(e => {
+								return e
+							})
+
+							weatherArr.splice(0,1)
+							scoreSort.splice(0,1)
+
+							//console.log(weatherArr)
+							
+							// for(let i of scoreSort){
+							// 	// console.log(i)
+							// 	mapping[i] = i[0]
+							// }
+
+
+							for(let i of scoreSort){
+
+								const cityname = i[0]
+
+								// console.log(cityname)
+								
+								if(allBoss.indexOf(cityname) == -1){
+									allBoss.push(cityname)
+									d3Json.children.push({
+										name: cityname,
+										children: []
+									})
+								}
+								
+								//const seconds = isNaN(parseInt(i[3])) ? 40 : parseInt(i[3])
+								
+								d3Json.children.find(e => e.name == cityname).children.push({
+									name:i[1],
+									value:i[2]
+								})
+								
+
+								
+							}
+							treemapContainer.appendChild(mkSVG(treemapContainer, allBoss, d3Json))
+							
+						}
+						
+						fr.readAsText(csvFile,'utf-8')
+					}
+					
+				})
+
+				
+			
+			})
+		</script>
+	
+	
+	
+</body></html>
