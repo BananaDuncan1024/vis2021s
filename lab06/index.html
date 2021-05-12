@@ -34,7 +34,7 @@ var y = d3.scaleLinear()
 
 // set the colors
 var z = d3.scaleOrdinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#98abc5", "#FF2626", "#7b6888", "#D10000", "#a05d56", "#F00000", "#FF8282"]);
 
 // load the csv and create the chart
 d3.csv("./data.csv", function(d, i, columns) {
@@ -55,22 +55,22 @@ d3.csv("./data.csv", function(d, i, columns) {
     .selectAll("g")
     .data(d3.stack().keys(keys)(data))
     .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
+    .attr("fill", function(d) { return z(d.key); })
     .selectAll("rect")
     .data(function(d) { return d; })
     .enter().append("rect")
-      .attr("x", function(d) { return x(d.data.ID); })
-      .attr("y", function(d) { return y(d[1]); })
-      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-      .attr("width", x.bandwidth())
+    .attr("x", function(d) { return x(d.data.ID); })
+    .attr("y", function(d) { return y(d[1]); })
+    .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+    .attr("width", x.bandwidth())
     .on("mouseover", function() { tooltip.style("display", null); })
     .on("mouseout", function() { tooltip.style("display", "none"); })
     .on("mousemove", function(d) {
-      console.log(d);
-      var xPosition = d3.mouse(this)[0] - 5;
-      var yPosition = d3.mouse(this)[1] - 5;
-      tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-      tooltip.select("text").text(d[1]-d[0]);
+    console.log(d);
+    var xPosition = d3.mouse(this)[0] - 5;
+    var yPosition = d3.mouse(this)[1] - 5;
+    tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+    tooltip.select("text").text(d[1]-d[0]);
     });
 
   g.append("g")
@@ -81,7 +81,7 @@ d3.csv("./data.csv", function(d, i, columns) {
   g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(y).ticks(null, "s"))
-    .append("text")
+      .append("text")
       .attr("x", 2)
       .attr("y", y(y.ticks().pop()) + 0.5)
       .attr("dy", "0.32em")
@@ -93,9 +93,9 @@ d3.csv("./data.csv", function(d, i, columns) {
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "end")
-    .selectAll("g")
-    .data(keys.slice().reverse())
-    .enter().append("g")
+      .selectAll("g")
+      .data(keys.slice().reverse())
+      .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
   legend.append("rect")
@@ -113,20 +113,20 @@ d3.csv("./data.csv", function(d, i, columns) {
 
   // Prep the tooltip bits, initial display is hidden
   var tooltip = svg.append("g")
-    .attr("class", "tooltip")
-    .style("display", "none");
+      .attr("class", "tooltip")
+      .style("display", "none");
       
   tooltip.append("rect")
-    .attr("width", 60)
-    .attr("height", 20)
-    .attr("fill", "white")
-    .style("opacity", 0.5);
+      .attr("width", 60)
+      .attr("height", 20)
+      .attr("fill", "white")
+      .style("opacity", 0.5);
 
   tooltip.append("text")
-    .attr("x", 30)
-    .attr("dy", "1.2em")
-    .style("text-anchor", "middle")
-    .attr("font-size", "12px")
-    .attr("font-weight", "bold");
+      .attr("x", 30)
+      .attr("dy", "1.2em")
+      .style("text-anchor", "middle")
+      .attr("font-size", "12px")
+      .attr("font-weight", "bold");
 
 </script>
