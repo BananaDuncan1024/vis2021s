@@ -1,0 +1,83 @@
+h/資料說明
+t/From kaggle Adult Census Income dataset
+t/This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). 
+t/目標：根據人口普查數據預測收入是否超過 5 萬美元/年
+
+h/資料欄位介紹與分析
+t/目標欄位 : income 收入
+img/income.png
+s/income 
+
+t/age 年齡
+img/age.png
+s/age
+
+t/workclass 職業類別
+img/workclass.png
+s/workclass
+
+t/education 教育
+img/education.png
+s/education
+
+t/educational-num 學齡
+img/education.num.png
+s/educational-num
+
+t/marital.status 婚姻狀況
+img/marital.status.png
+s/marital.status
+
+t/occupation 職業
+img/occupation.png
+s/occupation
+
+t/relationship 家庭關係
+img/relation.png
+s/relationship
+
+t/race 種族
+img/race.png
+s/race
+
+t/gender 性別
+img/sex.png
+s/gendeer
+
+t/capital gain 資本收益 
+img/capital.gain.png
+s/capital.gain
+
+t/capital loss 資本損失
+img/capital.loss.png
+s/capital.loss
+
+t/hours-per-week 每周工作小時數
+img/hour.png
+s/hour-per-week
+
+t/native-country 祖國
+
+h/
+h/
+
+s/從以上的的圖表可以看處部分欄位與判斷收入有強烈的關係(家庭關係，性別...等)，則有部分的欄位卻愈收入沒有明顯的相關性(資本負債...等)。
+h/
+h/
+
+h/資料處理
+t/一、從原本 38000 筆資料中隨機取其中 667 筆資料作為我們的訓練及測試資料，其中訓練資料集比例為 70%，測試資料集比例為 30%。
+t/二、因為原始資料過多，我們選取了其中667筆，
+
+h/訓練說明
+t/使用 Python 平台，以 sklearn 機器學習套件。
+t/以 DecisionTreeClassifier 進行決策樹的訓練生成樹的模型，並透過 train_test_split 對訓練以及測試資料集進行 7:3 的分割。
+t/並使用labelEncoder來轉化類別型的特徵。
+
+
+h/
+h/
+h/
+h/
+h/
+h/

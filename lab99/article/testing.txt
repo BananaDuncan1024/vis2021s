@@ -1,0 +1,25 @@
+h/預測準確率
+t/訓練資料集的準確率為 99.8%
+t/測試資料集的準確率為 83%
+img/Metrix.png
+s/結果分析
+h/
+h/
+h/試想
+t/如何提高準確率？
+t/
+s/我們或許可以透過資料分析的結果，剔除不重要的欄位，或許可以有效的增加準確率。又或許我們可以進行特徵工程，讓資訊更加清晰，來提高準確率。
+img/feature.jpg
+h/
+h/
+
+h/心得
+t/通過這次專案：
+t/通過python sklearn matplotlib seaborn ...等套件 我們可以很好的去探索並分析資料。並通過D3來可視化決策樹，來達到傳遞知識的目的。
+t/
+
+
+h/
+h/
+img/thankyou.png
+s/ Thanks for  reading!

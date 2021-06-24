@@ -1,0 +1,37 @@
+
+
+#training-section,
+#testing-section {
+    height: 100%;
+    overflow: hidden;
+}
+
+#train-vs-test {
+
+    height: 100%;
+    position: fixed;
+    max-width: 100%;
+}
+
+
+.hr {
+    background-color: #ff4800;
+    border: none;
+    content: '';
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 10rem;
+}
+
+.hr.duan {
+    background-color: rgb(27, 2, 252);
+    border: none;
+    content: '';
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 4rem;
+}
